@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesonal Portfolio | Responsive website</title>
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+            <li><a href="#testimonial" onclick="toggleMenu();">Testimonial</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>Olá, Me chamo<br><span>Juliana</span></h2>
+            <h3>e sou fotografa</h3>
+            <a href="#" class="btn">Entre em contato</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>Sobre mim</h2>
+        </div>
+        <div class="content_">
+            <div class="contentBx">
+                <h3>Fotografa</h3>
+                <p>Minha história com fotografia começou em 2000 quando
+                    ganhei minha primeira camera fotografica, e desde 
+                    aquele dia eu percebi que amava fotografar e resolvi
+                    seguir como profissão, me especializando e treinando.
+                    <br><br>
+                    sempre fui apaixonada por fotografia mais voltado a algo
+                    mais natural, mais limpo.
+                </p>
+            </div>
+            <div class="w50">
+                <img src="./images/guria.jpg" class="img" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="heading white">
+            <h2>Services</h2>
+            <p>serviços disponiveis</p>
+        </div>
+        <div class="content_">
+            <div class="serviceBx">
+                <img src="./images/icon1.png" alt="">
+                <h2>Edição de fotografia</h2>
+                <p>faço edições de fotografia e 
+                    restaurações fotograficas.
+                </p>
+            </div>
+            <div class="serviceBx">
+                <img src="./images/icon2.png" alt="">
+                <h2>Escolha de foto</h2>
+                <p>Você poderá escolher quantas fotos preferir e 
+                    farei um pacote com valor personalizado.
+                </p>
+            </div>
+            <div class="serviceBx">
+                <img src="./images/icon3.png" alt="">
+                <h2>Posso fazer envio somente por whatsapp</h2>
+                <p>envio de fotos realizadas por whatsapp
+                </p>
+            </div>
+            <div class="serviceBx">
+                <img src="./images/icon4.png" alt="">
+                <h2>Ensaio fotografico</h2>
+                <p>Estou disponivel para ensaios fotograficos
+                    para saber mais sobre horários disponiveis
+                    entrar em contato.
+                </p>
+            </div>
+            <div class="serviceBx">
+                <img src="./images/icon5.png" alt="">
+                <h2>Contrato de serviços que serão prestados</h2>
+                <p>Para uma segurança minha e do cliente faço um Contrato
+                    para que ambas as partes tenham certeza que receberam
+                    o valor esperado e entrega.
+                </p>
+            </div>
+            <div class="serviceBx">
+                <img src="./images/icon6.png" alt="">
+                <h2>Trabalho com videos</h2>
+                <p>Faço gravações de videos e momentos, 
+                    a escolha do cliente. para o envio, 
+                    faço junto ja editado, e qualquer problema
+                    ou insatisfação é reembolsado.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="work" id="work">
+        <div class="heading">
+            <h2>Trabalhos</h2>
+            <p>fotografias feitas em clientes</p>
+        </div>
+        <div class="content_">
+            <div class="workBx">
+                <img src="./images/gatin.jpg" alt="">
+            </div>
+            <div class="workBx">
+                <img src="./images/pexels-alex-umbelino-14306434.jpg" alt="">
+            </div>
+            <div class="workBx">
+                <img src="./images/pexels-the-lazy-artist-gallery-4164088.jpg" alt="">
+            </div>
+            <div class="workBx">
+                <img src="./images/pexels-craig-adderley-1835900.jpg" alt="">
+            </div>
+        </div>
+        <div class="heading">
+            <a href="#" class="btn">view</a>
+        </div>
+    </section>
+    <section class="testimonial" id="testimonial">
+        <div class="heading">
+            <h2>Feedbacks de clientes</h2>
+            <p>Feedbacks de clientes</p>
+        </div>
+        <div class="content_">
+            <div class="testimonialBx">
+                <p>Imaginava que o pré wedding fosse uma sessão simples de fotos que, 
+                    é tirada alguns meses antes do casamento...Estava totalmente enganada,
+                    nosso fotografo nos mostrou que o pré wedding vai muito alem.</p>
+                <h3>Someone famous<br><span>Creative Design</span></h3>
+            </div>
+            <div class="testimonialBx">
+                <p>Imaginava que o pré wedding fosse uma sessão simples de fotos que, 
+                    é tirada alguns meses antes do casamento...Estava totalmente enganada,
+                    nosso fotografo nos mostrou que o pré wedding vai muito alem.</p>
+                <h3>Someone famous<br><span>Creative Design</span></h3>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contatos</h2>
+            <p>Entre em contato para mais informações</p>
+        </div>
+        <div class="content_">
+            <div class="contactInfo">
+                <h3 class="title-contact">Contact Info</h3>
+                <div class="icon-contact">
+                    <div class="icon-ajust whatsapp">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </div>
+                    <div class="icon-ajust instagram">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                    <div class="icon-ajust">
+                        <ion-icon name="logo-tiktok"></ion-icon>
+                    </div>
+                </div>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <ion-icon name="location"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h3>endereço</h3>
+                            <p>4780 rua sei la onde,<br>seilai,seilala,<br>607950</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <ion-icon name="call"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h3>telefone</h3>
+                            <p>(18)323309392</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h3>email</h3>
+                            <p>seilala@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ImagePessoa">
+                <div class="imageajust">
+                    <img src="./images/camera-fotografica-estrada.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>Copyright Bianca teodoro urtado</p>
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active')
+            menu.classList.toggle('active')
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
