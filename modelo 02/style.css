@@ -9,34 +9,49 @@
 }
 
 section {
-    padding: 100px;
+    padding: 40px 50px;
 }
 
 .banner {
     position: relative;
     min-height: 100vh;
-    background: url(./images/guriapreto.jpg);
+    background: url(./images/guriapretooriginal.jpeg);
     background-size: cover;
     background-position: right;
+    padding: 150px 50px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
+}
+
+a {
+    color: #fff;
+}
+
+header.sticky a {
+    color: #fff;
+}
+
+.content-image {
+    display: flex;
+    justify-content: center;
 }
 
 .banner h2 {
-    font-size: 3em;
+    font-size: 1.8rem;
     color: #fff;
     font-weight: 500;
     line-height: 1.5em;
 }
 
 .banner h2 span {
-    font-size: 1.5em;
+    font-size: 2.8rem;
     font-weight: 700;
 }
 
 .banner h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #fff;
     font-weight: 500;
 }
@@ -46,68 +61,271 @@ section {
     background: #2196f3;
     display: inline-block;
     color: #fff;
-    margin-top: 20px;
-    padding: 10px 30px;
-    font-size: 18px;
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: 700;
     border-radius: 10px;
 }
 
-header {
+.logo {
+    color: #fff;
+}
+
+  /* header */
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
+    height: 70px;
     width: 100%;
-    padding: 40px 100px;
     z-index: 1000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     transition: 0.5s;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
 }
 
 header.sticky {
     background-color: #fff;
-    padding: 20px 100px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-header .logo {
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 2px;
 }
 
 header.sticky .logo {
     color: #111;
 }
 
-header ul {
-    position: relative;
-    display: flex;
+header.sticky .menu-icon .navicon, 
+header.sticky .menu-icon .navicon::before, 
+header.sticky .menu-icon .navicon::after {
+    background: #111;
 }
 
-header ul li {
-    position: relative;
-    list-style: none;
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+    border-radius: 0 0 10px 10px;
+    color: #2196f3;
 }
 
-header ul li a {
-    position: relative;
-    display: inline-block;
-    margin: 0 15px;
-    color: #fff;
+header.sticky li a:hover, 
+header .menu-btn:hover {
+    background-color: #111;
+    color: #2196f3;
+}
+
+.header.sticky li a:hover, 
+.header.sticky .menu-btn:hover {
+    background: #fff;
+    color: #2196f3;
+}
+
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    padding: 30px;
     text-decoration: none;
 }
 
-header.sticky ul li a {
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header.sticky .menu {
+    background: #fff;
+}
+
+.header.sticky .menu a {
     color: #111;
+}
+
+header .menu a {
+    color: #111;
+}
+
+header.sticky .menu {
+    background: #111;
+}
+
+header.sticky .menu a {
+    color: #fff;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    padding: 40px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+max-height: 390px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+top: 0;
+}
+
+  /* 48em = 768px */
+
+@media (min-width: 48rem) {
+
+    .banner {
+        padding: 150px 80px 20px;
+    }
+
+    .header .logo {
+        padding: 20px;
+    }
+
+    .header li {
+        float: left;
+    }
+    .header li a {
+        color: #fff;
+        padding: 25px 15px 10px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+
+    .contactInfoBx  {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .contactInfoBx .box {
+        margin: 0 20px;
+    }
+
+    .contentBx {
+        padding: 0 100px;
+    }
+}
+
+@media (min-width: 62rem) {
+
+    .header li a {
+        padding: 25px 22px 10px;
+    }
+
+    .banner h2 {
+        font-size: 3rem;
+    }
+
+    .banner h2 span {
+        font-size: 3.8rem;
+    }
+
+    .btn {
+        padding: 10px 40px;
+        font-size: 1.2rem;
+    }
+
+    .work .content_ {
+        flex-direction: row;
+    }
+
+    .work .content_ .workBx {
+        max-width: 550px;
+    }
+
+    .testimonial .content_ {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 87.5rem) {
+    
+    .work .content_ .workBx {
+        max-width: 600px;
+    }
+
+    .btn {
+        margin-top: 40px;
+    }
+
+    .testimonial .content_  {
+        padding: 0 31.25rem;
+    }
 }
 
 .heading {
@@ -120,14 +338,11 @@ header.sticky ul li a {
 .content_ {
     display: flex;
     justify-content: space-between;
-}
-
-.contentBx {
-    padding-right: 40px;
+    flex-direction: column;
 }
 
 .contentBx h3 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -143,6 +358,7 @@ img {
     width: 500px;
     height: 400px;
     object-fit: cover;
+    margin-top: 20px;
 }
 
 .services {
@@ -165,7 +381,7 @@ img {
     background: #222;
     color: #fff;
     max-width: 340px;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
     transition: 0.5s;
 }
@@ -179,6 +395,7 @@ img {
 }
 
 .services .content_ .serviceBx h2 {
+    margin-top: 10px;
     font-size: 20px;
     font-weight: 600;
 }
@@ -190,8 +407,10 @@ img {
 }
 
 .work .content_ .workBx {
-    width: 50%;
-    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 .work .content_ .workBx img {
@@ -208,14 +427,13 @@ img {
 .testimonial .content_ {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .testimonial .content_ .testimonialBx {
-    max-width: calc(50% - 40px);
-    padding: 60px 40px;
-    margin: 20px;
-    background: #2196f3;
+    max-width: calc(100% - 20px);
+    padding: 40px 20px;
+    margin: 10px;
+    background-color: #2196f3;
 }
 
 .testimonial .content_ .testimonialBx p {
@@ -226,7 +444,7 @@ img {
 }
 
 .testimonial .content_ .testimonialBx h3 {
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: end;
     color: #fff;
     font-weight: 600;
@@ -245,6 +463,7 @@ img {
 
 .ImagePessoa .imageajust {
     display: flex;
+    justify-content: center;
 }
 
 .contact {
@@ -279,6 +498,7 @@ img {
 }
 
 .contactInfo {
+    margin: 20px 0;
     min-width: 40%;
     color: #fff;
 }
@@ -291,6 +511,7 @@ img {
     position: relative;
     padding: 20px 0;
     display: flex;
+    justify-content: center;
 }
 
 .contactInfoBx .box .icon {
@@ -326,131 +547,14 @@ img {
     padding: 10px;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
-    header, header.sticky {
-        padding: 20px 50px;
-        z-index: 1000;
-    }
+.title-menu {
+    display: flex;
+}
 
-    .menu {
-        position: fixed;
-        top: 75px;
-        left: -100%;
-        display: block;
-        padding: 100px 50px;
-        text-align: center;
-        width: 100%;
-        height: 100vh;
-        background: #fff;
-        transition: 0.5s;
-        z-index: 999;
-        border-top: 1px solid rgba(0, 0, 0, 0.2);
-    }
+.title-ajust {
+    margin-right: 140px;
+}
 
-    .menu.active {
-        left: 0;
-    }
-
-    header ul li a {
-        color: #111;
-        font-size: 24px;
-        margin: 10px;
-    }
-
-    .toggle {
-        width: 40px;
-        height: 40px;
-        background: url(./images/menu.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 30px;
-        cursor: pointer;
-    }
-
-    .toggle.active {
-        background: url(./images/close.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 25px;
-        cursor: pointer;
-    }
-
-    header.sticky .toggle {
-        filter: invert(1);
-    }
-
-    section {
-        padding: 100px 50px;
-    }
-
-    .banner {
-        padding: 150px 50px 100px;
-    }
-
-    .banner h2 {
-        font-size: 1.5em;
-    }
-
-    .banner h3 {
-        font-size: 1em;
-    }
-
-    .btn {
-        margin-top: 10px;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-
-    .heading h2 {
-        font-size: 24px;
-    }
-
-    .contentBx h3 {
-        font-size: 20px;
-    }
-
-    .content_ {
-        flex-direction: column;
-    }
-
-    .img {
-        margin-top: 20px;
-    }
-
-    .services .content_ .serviceBx {
-        margin: 10px;
-    }
-
-    .work .content_ .workBx {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-    }
-
-    .testimonial .content_ .testimonialBx {
-        max-width: calc(100% - 20px);
-        padding: 40px 20px;
-        margin: 10px;
-        background-color: #2196f3;
-    }
-
-    .testimonial .content_ .testimonialBx h3 {
-        margin-top: 20px;
-    }
-
-    .contactInfo {
-        margin: 20px 0;
-    }
-
-    .contactInfoBx {
-        display: flex;
-        justify-content: center;
-    }
-
-    .toggle {
-        display: flex;
-        align-items: flex-start;
-    }
+.heading h2 {
+    font-size: 24px;
 }
